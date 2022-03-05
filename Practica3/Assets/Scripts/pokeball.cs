@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class pokeball : Botar
 {
-    // Start is called before the first frame update
-    void Start()
+     private Rigidbody rb;
+     public Vector3 direction;
+     public float kickforce = 10f;
+    void Start() 
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override void Interactive()
     {
-        
+        base.Interactive();
+        //Patear la pokeball
+        rb.AddForce(direction * kickforce);
     }
 }

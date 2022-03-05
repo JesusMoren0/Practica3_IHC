@@ -4,21 +4,44 @@ using UnityEngine;
 
 public class Botar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    protected bool isInsideZone;
+
+    public GameObject dialog;
+
     void Start()
     {
+        if(dialog != null)
+        {
+            dialog.SetActive(false);
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        
+        if(isInsideZone && Input.GetKeyDown(KeyCode.E))
+        {
+            Interactive();
+        }    
     }
+   void OnTriggerEnter(Collider otherCollider)
+   {
+       if(!otherCollider.CompareTag("Player")) return;
+       Debug.Log("Collison" + otherCollider.name);
+       isInsideZone = true;
+       if(dialog != null) dialog.SetActive(true);
+   }
 
-    void OnTriggerEnter(Collider other) 
-     {
-         Debug.Log("Collision" + other.name);
-         
-     }
+   void OnTriggerExit(Collider other)
+   {
+        if(!other.CompareTag("Player")) return;
+        Debug.Log("Collision Exit" + other.name);
+        isInsideZone = false;
+        if(dialog != null) dialog.SetActive(false);
+   }
+
+   protected virtual void Interactive()
+   {
+       Debug.Log("Doing something");
+   }
 }
