@@ -8,8 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.13.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/360Video.unity
     guid: d4da8a30b07d17448a6d3dd102651548
+  - enabled: 1
+    path: Assets/Practica5_IHC.unity
+    guid: 19121eaed95c7f14d9d15e057bdb73d4
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5c049fed30f122142a06e363d5e0accd, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f20db6582a7b9914d991cd2c097733c7, type: 2}
