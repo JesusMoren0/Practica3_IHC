@@ -25,3 +25,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: portada
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5126208550195888106
+      m_GuidHigh: 8858411631150018224
+    m_SerializedTextureGuid:
+      m_GuidLow: 9913665680926418771
+      m_GuidHigh: 1577386940204665753
+    m_Size: {x: 0.15, y: 0.19035533}
+    m_SpecifySize: 1
+    m_Name: portada2
+    m_Texture: {fileID: 0}

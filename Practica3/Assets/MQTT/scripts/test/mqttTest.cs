@@ -10,15 +10,24 @@ using UnityEngine.UI;
 using System;
 
 public class mqttTest : MonoBehaviour {
+	
 	public string brokerHostName = "test.mosquitto.org";
 	public int brokerPort = 1883;
+
 	public string temperatureTopic = "casa/sala/temperatura";
+
 	public string lightTopic = "casa/sala/luz";
+
 	private MqttClient client;
+
 	public Text displayText;
+
 	public GameObject directionalLight;
+
 	string lastMessage;
+
 	volatile bool lightState = false;
+
 	// Use this for initialization
 	void Start () {
 		// create client instance 
